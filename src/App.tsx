@@ -50,10 +50,10 @@ const MenuItem: FC<MenuItemProps> = ({ item, anchorElement }) => {
     <div {...extraProps} style={style} className={styles.menuItem}>
       <h3>{`${item.label} ${hasChildren ? "->" : ""}`}</h3>
 
-      {hasChildren && hover && (
+      {hasChildren && hover && wrapperRef.current && (
         <MenuWrapper
           data={item.children || []}
-          anchorElement={wrapperRef.current as HTMLElement}
+          anchorElement={wrapperRef.current}
         />
       )}
     </div>

@@ -1,90 +1,59 @@
-import { MenuItemType, Data } from "./types";
-
-export const sampleData: Data = [
-  {
-    name: "Video",
-    items: ["MP4", "AVI", "MKV"],
-  },
-  {
-    name: "Evidence",
-    items: ["Image", "Video"],
-  },
-  {
-    name: "Devices",
-    items: ["AB3", "AB2", "Taser"],
-  },
-  {
-    name: "AB3",
-    items: ["AB3 1", "AB3 2"],
-  },
-  {
-    name: "Image",
-    items: ["JPEG"],
-  },
-  {
-    name: "JPEG",
-    items: ["JPEG 1"],
-  },
-];
+import { MenuItemType } from "./types";
 
 export const sampleMenuData: MenuItemType[] = [
   {
-    label: "Devices",
+    label: "Vehicle",
     children: [
       {
-        label: "AB3",
+        label: "Car",
         children: [
           {
-            label: "AB3 1",
-            children: [],
-          },
-          {
-            label: "AB3 2",
-            children: [],
-          },
-        ],
-      },
-      {
-        label: "AB2",
-        children: [],
-      },
-      {
-        label: "Taser",
-        children: [],
-      },
-    ],
-  },
-  {
-    label: "Evidence",
-    children: [
-      {
-        label: "Image",
-        children: [
-          {
-            label: "JPEG",
+            label: "BMW",
             children: [
               {
-                label: "JPEG 1",
+                label: "X5",
+                children: [],
+              },
+              {
+                label: "X6",
                 children: [],
               },
             ],
           },
+          {
+            label: "Toyota",
+            children: [],
+          },
+          {
+            label: "Honda",
+            children: [],
+          },
         ],
       },
       {
-        label: "Video",
+        label: "Motobike",
         children: [
           {
-            label: "MP4",
-            children: [],
+            label: "Honda",
+            children: [
+              {
+                label: "Future",
+              },
+              {
+                label: "Winner",
+              },
+            ],
           },
           {
-            label: "AVI",
-            children: [],
+            label: "Yamaha",
+            children: [
+              {
+                label: "Exciter",
+              },
+            ],
           },
           {
-            label: "MKV",
-            children: [],
+            label: "Suzuki",
           },
         ],
       },
