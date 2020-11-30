@@ -31,12 +31,10 @@ interface MenuItemProps {
   anchorElement?: HTMLElement | null;
 }
 
-const MenuItem: FC<MenuItemProps> = ({ item, anchorElement }) => {
+const MenuItem: FC<MenuItemProps> = ({ item }) => {
   const [hover, setHover] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const hasChildren = item.children && item.children.length > 0;
-
-  const style = anchorElement ? calculateStyle({ anchorElement }) : {};
 
   const extraProps = hasChildren
     ? {
@@ -47,7 +45,7 @@ const MenuItem: FC<MenuItemProps> = ({ item, anchorElement }) => {
     : {};
 
   return (
-    <div {...extraProps} style={style} className={styles.menuItem}>
+    <div {...extraProps} className={styles.menuItem}>
       <h3>{`${item.label} ${hasChildren ? "->" : ""}`}</h3>
 
       {hasChildren && hover && wrapperRef.current && (
