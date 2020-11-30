@@ -28,7 +28,6 @@ const Portal: FC = ({ children }) => {
 
 interface MenuItemProps {
   item: MenuItemType;
-  anchorElement?: HTMLElement | null;
 }
 
 const MenuItem: FC<MenuItemProps> = ({ item }) => {
