@@ -1,4 +1,5 @@
-export interface MenuItemType {
+export interface ItemType {
   label: string;
-  children?: MenuItemType[];
+  parent?: string
+  children?: ItemType[];
 }
