@@ -2,13 +2,3 @@
   margin-top: 50px;
   margin-left: 100px;
 }
-
-.menuWrapper {
-  position: fixed;
-  border: 1px solid cyan;
-}
-
-.menuItem {
-  padding: 16px 0;
-  cursor: pointer;
-}
